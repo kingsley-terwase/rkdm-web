@@ -17,7 +17,7 @@ export default function EventRow({ e, mine, onAct }: { e: Ev; mine?: boolean; on
             : <Button component={Link} to="/events" variant="outlined">View details</Button>}
           <Typography variant="caption" color="text.secondary">{e.reg}/{e.cap} registered</Typography></Box>
       </Box>
-      <Box sx={{ display: { xs: 'none', md: 'block' }, height: 190, borderRadius: 3, background: bg(e.img) }} />
+      <Box sx={{ display: { xs: 'none', md: 'block' }, height: 190, borderRadius: 1, background: bg(e.img) }} />
     </Box>
   )
 }

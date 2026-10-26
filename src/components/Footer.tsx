@@ -12,7 +12,7 @@ export default function Footer() {
         <Box><Box component="img" src="/logo.png" alt="RKDM" sx={{ height: 100 }} />
           <Typography sx={{ mt: 1.5, opacity: 0.85 }}>A global family walking in royal dominion, set on fire by the Word and led by the Holy Spirit.</Typography></Box>
         {cols.map(([t, ls]) => <Box key={t}><Typography fontWeight={800} sx={{ color: '#f5b301', mb: 1.5 }}>{t}</Typography>
-          {ls.map(([l, to]) => <Typography key={l} component={Link} to={to} sx={{ display: 'block', py: 0.4, opacity: 0.9, '&:hover': { color: '#f97316' } }}>{l}</Typography>)}</Box>)}
+          {ls.map(([l, to]) => <Typography key={l} component={Link} to={to} sx={{ display: 'block', textDecorationStyle: 'none', py: 0.4, color: '#fff', opacity: 0.9, '&:hover': { color: '#f97316' } }}>{l}</Typography>)}</Box>)}
         <Box><Typography fontWeight={800} sx={{ color: '#f5b301', mb: 1.5 }}>Stay connected</Typography>
           <Box sx={{ display: 'flex', gap: 1 }}><TextField size="small" fullWidth placeholder="Your email" value={email} onChange={e => setEmail(e.target.value)} sx={{ bgcolor: '#fff', borderRadius: 2 }} />
             <Button variant="contained" color="secondary" disabled={!/^\S+@\S+\.\S+$/.test(email)} onClick={() => { setMsg('Check your inbox to confirm'); setEmail('') }}>Join</Button></Box>
