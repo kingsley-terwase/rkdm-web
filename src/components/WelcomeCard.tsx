@@ -48,7 +48,7 @@ export default function WelcomeCard({ html, actions = true, sx }: WelcomeCardPro
           display: 'grid',
           placeItems: 'center',
           minHeight: { xs: 150, md: 'auto' },
-          background: `linear-gradient(150deg, ${NAVY}, ${BLUE} 70%, #2a6bff)`,
+          background: `linear-gradient(170deg, ${NAVY}, ${BLUE} 70%, #2a6bff)`,
           overflow: 'hidden',
           '&::before': {
             content: '""',
@@ -56,7 +56,7 @@ export default function WelcomeCard({ html, actions = true, sx }: WelcomeCardPro
             width: 280,
             height: 280,
             borderRadius: '50%',
-            background: `radial-gradient(circle, ${GOLD}55, transparent 68%)`,
+            
           },
           '&::after': {
             content: '""',

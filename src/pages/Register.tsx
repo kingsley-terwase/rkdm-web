@@ -116,7 +116,8 @@ export default function Register() {
         <Box sx={{ display: 'grid', gap: 2, gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' } }}>
           <TextField label="First name" value={f.first} onChange={set('first')} autoComplete="given-name" sx={field}
             InputProps={{ startAdornment: <InputAdornment position="start"><PersonRegular /></InputAdornment> }} />
-          <TextField label="Last name" value={f.last} onChange={set('last')} autoComplete="family-name" sx={field} />
+          <TextField label="Last name" value={f.last} onChange={set('last')} autoComplete="family-name" sx={field}
+            InputProps={{ startAdornment: <InputAdornment position="start"><PersonRegular /></InputAdornment> }} />
         </Box>
 
         {/* full width */}

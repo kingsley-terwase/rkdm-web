@@ -46,7 +46,6 @@ export const Tile = ({ children, onClick, p= 3, accent }: TileProps) => {
         borderRadius: 0.7,
         cursor: interactive ? 'pointer' : 'default',
         border: `1px solid ${theme.palette.divider}`,
-        background: `linear-gradient(160deg, ${theme.palette.background.paper} 55%, ${alpha(color, 0.07)} 100%)`,
         transition: 'transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s, border-color .35s',
 
         // Cursor-following glow
@@ -57,7 +56,7 @@ export const Tile = ({ children, onClick, p= 3, accent }: TileProps) => {
           pointerEvents: 'none',
           opacity: 0,
           transition: 'opacity .35s',
-          background: `radial-gradient(260px circle at var(--x) var(--y), ${alpha(color, 0.2)}, transparent 70%)`,
+          background: `radial-gradient(circle at var(--x) var(--y), ${alpha(color, 0.35)}, transparent 40%)`,
         },
 
         // Accent bar that grows on hover
@@ -68,7 +67,7 @@ export const Tile = ({ children, onClick, p= 3, accent }: TileProps) => {
           left: 0,
           right: 0,
           height: 4,
-          background: `linear-gradient(90deg, ${color}, ${theme.palette.secondary.main})`,
+          background: `linear-gradient(90deg, ${color}, ${color} 50%, ${alpha(color, 0.5)} 100%)`,
           transform: 'scaleX(.18)',
           transformOrigin: 'left',
           transition: 'transform .45s cubic-bezier(.2,.8,.2,1)',
